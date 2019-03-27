@@ -41,4 +41,73 @@ def ten
     end
 end
 
-ten
+# ten
+
+def testboucle
+    for i in 1..3
+        puts "il est passé par ici"
+        for x in 1..2
+            puts "il repassera par là"
+        end
+    end
+end
+
+# testboucle
+
+def tab_multiply
+    print "rentrez un nombre: "
+    nb = gets.chomp.to_i
+    for i in 1..10 do
+        result = nb * i
+        puts "#{nb} X #{i} = #{result}"
+    end
+end
+
+# tab_multiply
+
+def somme 
+    print "rentrez un nombre: "
+    nb = gets.chomp.to_i
+    # result = 0
+    # for i in 1..nb
+    #     result = result + i
+    # end
+    # puts result
+    i = 0
+    result = 0
+    while i < nb
+        i += 1
+        result = result + i 
+    end
+    puts result
+end
+
+# somme
+
+def factorielle
+    print "rentrez un nombre: "
+    nb = gets.chomp.to_i
+    result = 1
+    for i in 1..nb
+        result = result * i
+    end
+    puts result
+end
+
+# factorielle
+
+def biggie
+    puts "rentrez 5 nombres"
+    pg = 0
+    for i in 1..5
+        nb = gets.chomp.to_i
+        if i == 1 or nb > pg
+            pg = nb
+            ipg = i
+        end
+    end
+    puts "#{pg} est le plus grand"
+    puts "il a été saisi au n°: #{ipg}"
+end
+
+biggie
