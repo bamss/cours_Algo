@@ -67,11 +67,58 @@ end
 
 def fibonacci
     suite = [1, 1]
-    
+
     for i in 2..7
         suite[i] = suite[i - 1] + suite[i - 2]
     end
     p suite
 end
 
-fibonacci
+# fibonacci
+
+def bulletin
+    notes = []
+    sum = 0
+    for i in 1..9
+        print "rentre le note n° #{i}:  "
+        note = gets.chomp.to_i
+        notes << note
+        sum = sum + note
+    end
+    moy = sum/9
+    p moy
+end
+
+# bulletin
+
+def yingYang
+    print "rentrez le nombre de chiffre que vous voulez rentrez: "
+    nb = gets.chomp.to_i
+    tab = []
+    positif = 0
+    négatif = 0
+    for i in 1..nb
+        print "taper le chiffre n° #{i}: "
+        chiffre = gets.chomp.to_i
+        if chiffre > 0
+            positif += 1
+        else
+            négatif += 1
+        end
+        tab << chiffre
+    end
+    p tab
+    puts "il y a #{positif} chiffre possitif dans le array tab"
+    puts "il y a #{négatif} chiffre négatif dans le array tab"
+end
+
+# yingYang
+
+def tabsum
+    tab = [2, 3, 7, 10, 8]
+    result = 0
+    tab.each{|i| result += i}
+    puts result
+end
+
+tabsum
