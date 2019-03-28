@@ -110,4 +110,41 @@ def biggie
     puts "il a été saisi au n°: #{ipg}"
 end
 
-biggie
+# biggie
+
+def biggie2
+    puts "rentre des nombres"
+    pg = 0
+    nb = gets.chomp.to_i
+    i = 0
+    while nb != 0
+        i += 1
+        if i == 1 or nb > pg
+            pg = nb
+            ipg = i
+        end
+        nb = gets.chomp.to_i
+    end
+    puts "#{pg} est le plus grand"
+    puts "il a été saisi au n°: #{ipg}"
+end
+
+# biggie2
+
+def tierce
+    print "rentrer le nombre de chevaux partant: "
+    nb = gets.chomp.to_i
+    print "rentre le nombre de chevaux joués: "
+    p = gets.chomp.to_i
+    a = 1
+    b = 1
+    for i in 1..p
+        a = a * (i + nb - p) 
+        b = b * i 
+    end
+    d = a / b
+    puts "Dans l'ordre vous avez: #{a} chance de gagner !"
+    puts "Dans le désordre vous avez: #{d} de gagner !"
+end
+
+tierce
