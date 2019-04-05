@@ -66,7 +66,7 @@ def tri_bulle
     yaprout = true 
     while yaprout
         yaprout = false 
-        for i in 0..4
+        for i in 0..tab.size - 2
             if tab[i] < tab[i + 1]
                 temp = tab[i + 1]
                 tab[i + 1] = tab[i]
@@ -79,4 +79,44 @@ def tri_bulle
     p tab    
 end
 
-tri_bulle
+# tri_bulle
+
+def reverse
+    tab = ["Golfa", "Oumar", "Amadou"]
+
+    p tab.reverse
+end
+
+# reverse
+
+def couteau
+    tab = [17, 24, 65, 18, 2, 99]
+    p tab
+    print "quel element vous voulez supprimez dans le tableau ? "
+    nb = gets.chomp.to_i
+    tab.delete(nb) 
+    tab.delete_at(nb) #supprimez par l'index
+    puts "voualà le nouveau tab"
+    p tab
+end
+# couteau
+
+def find_a_word
+    dictionary = ["ballon", "coupe", "football", "tête"]
+    print "saissiser le mot: "
+    word = gets.chomp.to_s
+    exist = false
+    for i in 0..dictionary.size
+        if word == dictionary[i]
+            exist = true
+        end
+    end
+    if exist
+        puts "le mot existe dans le dictionnaire"
+    else
+        puts "le mot n'existe pas dans le dictionnaire"
+    end
+    puts dictionary.size
+end
+
+find_a_word
