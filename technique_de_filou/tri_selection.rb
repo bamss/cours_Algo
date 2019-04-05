@@ -119,4 +119,30 @@ def find_a_word
     puts dictionary.size
 end
 
-find_a_word
+# find_a_word
+
+def triple_double
+    puts "combien d'élément vous voulez dans votre tableau: "
+    nb = gets.chomp.to_i
+    tab = []
+    doub = false
+    for i in 1..nb
+        print "rentrez l'element n°#{i}: "
+        element = gets.chomp.to_i
+        tab << element
+    end
+    for i in 0..tab.size - 1
+        for j in i + 1..tab.size
+            if tab[i] == tab[j]
+                doub = true
+            end
+        end
+    end
+    if doub
+        puts "il y a un ou plusieurs doublons"
+    else
+        puts "il y a pas de doublons"
+    end
+end
+
+triple_double
